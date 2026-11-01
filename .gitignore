@@ -1,0 +1,16 @@
+**/build/
+**/manual_sim.vvp
+**/sim.vvp
+**/wave.vcd
+**/.Xil/
+*.jou
+*.log
+*.cache/
+*.hw/
+*.ip_user_files/
+*.runs/
+*.sim/
+*.gen/
+reports/**/*.hwpx
+reports/**/*.pdf
+

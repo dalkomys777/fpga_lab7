@@ -1,0 +1,14 @@
+{
+  "folders": [
+    { "path": "." },
+    { "path": "../ece2_474" }
+  ],
+  "settings": {
+    "files.exclude": {
+      "**/.git": true,
+      "**/.Xil": true,
+      "**/build": true
+    }
+  }
+}
+
