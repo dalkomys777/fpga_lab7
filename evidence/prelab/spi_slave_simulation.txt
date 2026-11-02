@@ -1,0 +1,6 @@
+VCD info: dumpfile wave.vcd opened for output.
+PASS SPI SLAVE: 55 A5 00 FF, CS ignore, one valid per byte
+C:\Users\young\Documents\fpga_lab7\circuits\spi_slave\sim\tb_design.v:21: $finish called at 23500000 (1ps)
+RUN C:\msys64\mingw64\bin\iverilog.EXE -g2012 -Wall -s tb -o C:\Users\young\Documents\fpga_lab7\circuits\spi_slave\build\sim\sim.vvp C:\Users\young\Documents\fpga_lab7\circuits\spi_slave\src\spi_slave.v C:\Users\young\Documents\fpga_lab7\circuits\spi_slave\sim\tb_design.v
+WARNING: Icarus teardown error after valid sim.vvp; continuing
+WAVE C:\Users\young\Documents\fpga_lab7\circuits\spi_slave\build\sim\wave.vcd
