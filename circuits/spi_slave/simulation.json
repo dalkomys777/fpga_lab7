@@ -1,0 +1,2 @@
+{"simulation_top":"tb","sources":["src/spi_slave.v"],"testbench":"sim/tb_design.v"}
+

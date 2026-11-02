@@ -1,14 +1,30 @@
 {
   "folders": [
-    { "path": "." },
-    { "path": "../ece2_474" }
+    { "name": "FPGA LAB7", "path": "." },
+    { "name": "spi_slave", "path": "circuits/spi_slave" },
+    { "name": "spi_master", "path": "circuits/spi_master" },
+    { "name": "spi_fpga_link", "path": "circuits/spi_fpga_link" },
+    { "name": "STM32 ece2_474", "path": "../ece2_474" }
   ],
   "settings": {
-    "files.exclude": {
-      "**/.git": true,
-      "**/.Xil": true,
-      "**/build": true
-    }
+    "editor.fontSize": 18,
+    "editor.minimap.enabled": false,
+    "files.associations": { "*.v": "verilog" },
+    "files.exclude": { "**/.git": true, "**/.Xil": true }
+  },
+  "extensions": { "recommendations": ["hudson-river-trading.vscode-slang", "lramseyer.vaporview"] },
+  "tasks": {
+    "version": "2.0.0",
+    "tasks": [
+      { "label": "SPI slave - simulate", "type": "process", "command": "C:/Users/young/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe", "args": ["${workspaceFolder:FPGA LAB7}/circuits/tools/fpga_lab.py", "simulate"], "options": {"cwd":"${workspaceFolder:spi_slave}"}, "problemMatcher": [] },
+      { "label": "SPI master - simulate", "type": "process", "command": "C:/Users/young/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe", "args": ["${workspaceFolder:FPGA LAB7}/circuits/tools/fpga_lab.py", "simulate"], "options": {"cwd":"${workspaceFolder:spi_master}"}, "problemMatcher": [] },
+      { "label": "SPI FPGA link - simulate", "type": "process", "command": "C:/Users/young/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe", "args": ["${workspaceFolder:FPGA LAB7}/circuits/tools/fpga_lab.py", "simulate"], "options": {"cwd":"${workspaceFolder:spi_fpga_link}"}, "problemMatcher": [] },
+      { "label": "STM32 task8 - Activate and Build", "type": "process", "command": "powershell.exe", "args": ["-NoProfile","-ExecutionPolicy","Bypass","-File","${workspaceFolder:FPGA LAB7}/stm32/tools/activate_and_build.ps1","-Task","task8"], "problemMatcher": [] },
+      { "label": "STM32 task9 master - Activate and Build", "type": "process", "command": "powershell.exe", "args": ["-NoProfile","-ExecutionPolicy","Bypass","-File","${workspaceFolder:FPGA LAB7}/stm32/tools/activate_and_build.ps1","-Task","task9_master"], "problemMatcher": [] },
+      { "label": "STM32 task9 slave - Activate and Build", "type": "process", "command": "powershell.exe", "args": ["-NoProfile","-ExecutionPolicy","Bypass","-File","${workspaceFolder:FPGA LAB7}/stm32/tools/activate_and_build.ps1","-Task","task9_slave"], "problemMatcher": [] },
+      { "label": "STM32 task10 - Activate and Build", "type": "process", "command": "powershell.exe", "args": ["-NoProfile","-ExecutionPolicy","Bypass","-File","${workspaceFolder:FPGA LAB7}/stm32/tools/activate_and_build.ps1","-Task","task10"], "problemMatcher": [] },
+      { "label": "STM32 task11 - Activate and Build", "type": "process", "command": "powershell.exe", "args": ["-NoProfile","-ExecutionPolicy","Bypass","-File","${workspaceFolder:FPGA LAB7}/stm32/tools/activate_and_build.ps1","-Task","task11"], "problemMatcher": [] }
+    ]
   }
 }
 
